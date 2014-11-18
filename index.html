@@ -11,6 +11,25 @@
 	<script src="js/jquery.js"></script>
 	<script src="_assets/js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+function ajax_get_json(){
+	var results = document.getElementById("results");
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "http://pixeleight.fi/json_list.php", true);
+    hr.setRequestHeader("Content-type", "application/json");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			results.innerHTML = "";
+			for(var obj in data){
+				results.innerHTML += data[obj].username+" is "+data[obj].email+"<hr />";
+			}
+	    }
+    }
+    hr.send(null);
+    results.innerHTML = "requesting...";
+}
+</script>
 </head>
 <body>
 <div data-role="page" class="jqm-demos jqm-home">
@@ -22,7 +41,8 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content jqm-content">
-
+<div id="results"></div>
+<script type="text/javascript">ajax_get_json();</script>
 		<h1>Welcome Dude!</h1>
 
 		<p><strong>Search and navigate</strong></p>
