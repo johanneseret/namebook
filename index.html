@@ -64,7 +64,7 @@
 		</div>
 		<!--footer!-->
 
-<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed"><div data-role="navbar" class="nav-glyphish-example" data-grid="d"><ul>
+<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false"><div data-role="navbar" class="nav-glyphish-example" data-grid="d"><ul>
 	<li><a href="#" class="ui-btn-active" id="contact" data-icon="custom">Contacts</a></li>
 	<li><a href="#" id="email" data-icon="custom">Recent</a></li>
 	<li><a href="#" id="skull" data-icon="custom">Missed</a></li>
@@ -78,4 +78,24 @@
 </div><!-- /page -->
 
 </body>
+<script>
+$(document).on( "click", ".show-page-loading-msg", function() {
+  var $this = $( this ),
+  theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+  msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+  textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+  textonly = !!$this.jqmData( "textonly" );
+  html = $this.jqmData( "html" ) || "";
+$.mobile.loading( 'show', {
+  text: msgText,
+  textVisible: textVisible,
+  theme: theme,
+  textonly: textonly,
+  html: html
+  });
+})
+.on( "click", ".hide-page-loading-msg", function() {
+  $.mobile.loading( "hide" );
+});
+</script>
 </html>
