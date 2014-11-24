@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contacts</title>
+	<icon src="icon.png" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    
+    <!-- RSS/ATOM feed -->
+    <link rel="alternate" type="application/rss+xml" title="" href="" />
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    
+    <!-- apple touch icon -->
+    <link rel="icon" sizes="192x192" href="touch-icon-192x192.png">
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png">
+                        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-72x72-precomposed.png">
+                            <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+                                
+                                <script src="vendor/js/modernizr.min.js"></script>
+                                
+                                <link href="vendor/css/normalize.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                <link href="vendor/css/bootstrap.min.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                <link href="vendor/css/font-awesome.min.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                <link href="css/main.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                
+                                <!--[if lte IE 8]>
+                                 <link href="css/ie.css" media="screen, projection" type="text/css" rel="stylesheet" />
+                                 <![endif]-->
+                                
+                                <link href="css/print.css" media="print" type="text/css" rel="stylesheet" />
+                                <meta charset="utf-8">
+                                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                                        <meta http-equiv="content-type" content="text/x-component">
+                                            <title>Numpad</title>
+                                            
+                                            <!-- General meta details -->
+                                            <meta name="keywords" content="" />
+                                            <meta name="description" content="" />
+                                            <meta name="author" content="<!-- replace here with Google author profile -->" />
+                                            <meta name="robot" content="index,follow" />
+                                            
+                                            <!-- Facebook -->
+                                            <meta property="og:title" content="" />
+                                            <meta property="og:url" content="" />
+                                            <meta property="og:image" content="" />
+                                            <meta property="og:description" content="" />
+                                            <meta property='og:site_name' content='' />
+                                            <meta property='og:type' content='article' />
+                                            <meta property='og:image' content=''/>
+                                            
+                                            <!-- Twitter -->
+                                            <meta name="twitter:card" content="" />
+                                            <meta name="twitter:site" content="" />
+                                            <meta name="twitter:creator" content="" />
+                                            <meta name="twitter:title" content="" />
+                                            <meta name="twitter:url" content="" />
+                                            <meta name="twitter:description" content="" />
+                                            <meta name="twitter:image" content="" />
+                                            
+                                            <!-- Google+ -->
+                                            <meta itemprop="name" content="" />
+                                            <meta itemprop="description" content="" />
+                                            <meta itemprop="audience" content="" />
+                                            <meta itemprop="image" content="" />
+                                            <meta itemprop="alternativeHeadline" content="" />
+                                            
+                                            <!-- RSS/ATOM feed -->
+                                            <link rel="alternate" type="application/rss+xml" title="" href="" />
+                                            
+                                            <!-- favicon -->
+                                            <link rel="icon" type="image/x-icon" href="favicon.ico" />
+                                            <link rel="icon" type="image/png" href="favicon.png" />
+                                            
+                                            <!-- apple touch icon -->
+                                            <link rel="icon" sizes="192x192" href="touch-icon-192x192.png">
+                                                <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png">
+                                                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+                                                        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
+                                                            <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png">
+                                                                <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-72x72-precomposed.png">
+                                                                    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+                                                                        
+                                                                        <script src="vendor/js/modernizr.min.js"></script>
+                                                                        
+                                                                        <link href="vendor/css/normalize.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                                                        <link href="vendor/css/bootstrap.min.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                                                        <link href="vendor/css/font-awesome.min.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                                                        <link href="css/main.css" media="screen,projection" type="text/css" rel="stylesheet" />
+                                                                        
+                                                                        <!--[if lte IE 8]>
+                                                                         <link href="css/ie.css" media="screen, projection" type="text/css" rel="stylesheet" />
+                                                                         <![endif]-->
+                                                                        
+                                                                        <link href="css/print.css" media="print" type="text/css" rel="stylesheet" />
+                                                                        <meta charset="utf-8">
+                                                                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                                                                                <title>Contacts</title>
+                                                                                <icon src="icon.png" />
+                                                                                <link rel="shortcut icon" href="favicon.ico">
+                                                                                    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+                                                                                        <link rel="stylesheet" href="_assets/css/jqm-demos.css">
+                                                                                            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+                                                                                                <script src="js/jquery.js"></script>
+                                                                                                <script src="_assets/js/index.js"></script>
+                                                                                                <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+<body>
+<div data-role="page" class="jqm-demos jqm-home">
+
+	<div data-role="header" class="jqm-header">
+		<h2 style="padding:16px;">Keypad</h2>
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content jqm-content">
+        
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Your Profile</li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="../myname.html">
+                        <h2>Name</h2>
+                        <p><strong>Full name: Janiv David</strong></p>
+                    <p><strong>Username: @denkko</strong></p>
+                    
+                    <p> Click to edit </p>
+                      
+                        </a></li>
+                <li><a href="../mynumbers.html">
+                        <h2>Phone number</h2>
+                        <p><strong>+358505004446</strong></p>
+                    <p> Primary number </p>
+                    <p> Click to edit </p>
+                      
+                        </a></li>
+                    <li><a href="../myemails.html">
+                        <h2>Email</h2>
+                        <p><strong>janivdavid@gmail.com</strong></p>
+                      <p> Primary email </p>
+                    <p> Click to edit </p>
+                        </a></li>
+                                        <li>
+                        <h2>Get connected</h2>
+                        
+                        <p><strong>Facebook</strong></p>
+                    <p><strong>Instagram</strong></p>
+                    <p><strong>Twitter</strong></p>
+                    <p><strong>LinkedIn</strong></p>
+                        </li>
+                </ul>
+                
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider"><a href="../changepassword.html">Change Password</a> </li>
+            
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider"><a href="../../index.html">Log out</a> </li>
+            </ul>
+            
+            
+    </div><!-- /content -->
+	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
+	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+	    		<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Change status</a></li>
+<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Add new contact</a></li>
+		     </ul>
+		</div><!-- /panel -->
+
+
+	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="b">
+		<div class="jqm-search">
+			<ul class="jqm-list" data-filter-placeholder="Search contacts..." data-filter-reveal="true">
+<li data-filtertext="@janivdavid" data-icon="phone"><a href="#">Janiv</a></li>
+<li data-filtertext="@johanneseret" data-icon="phone"><a href="#">Johannes</a></li>
+<li data-filtertext="@aapo" data-icon="phone"><a href="#">Alvar Aapo</a></li>
+<li data-filtertext="@molokovana" data-icon="phone"><a href="#">Irina Molokovana</a></li>
+<li data-filtertext="@sauli" data-icon="phone"><a href="#">Sauli Lehtinen</a></li>
+<li data-filtertext="@berska91" data-icon="phone"><a href="#">Berska</a></li>
+<li data-filtertext="@christianlee" data-icon="phone"><a href="#">Christian Lee</a></li>
+<li data-filtertext="@xenith" data-icon="phone"><a href="#">Xenith Weeler</a></li>
+		</ul>
+	</div>
+</li>
+
+
+
+			</ul>
+
+		</div>
+		<!--footer!-->
+
+<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false"><div data-role="navbar" class="nav-glyphish-example" data-grid="d"><ul>
+    <li><a href="../../index.html" id="contact" data-icon="custom">Contacts</a></li>
+    <li><a href="#" id="favorites" data-icon="custom">Favorites</a></li>
+    <li><a href="#" id="recent" data-icon="custom">Recent</a></li>
+    <li><a href="numpad/numpad.html" id="beer" data-icon="custom">Numpad</a></li>
+    <li><a href="#" class="ui-btn-active" id="coffee" data-icon="custom">Profile</a></li></ul></div>
+</div><!-- /footer -->
+
+	</div><!-- /panel -->
+
+
+</div><!-- /page -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="vendor/js/jquery.2.1.0.min.js"><\/script>')</script>
+<script src="vendor/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
