@@ -24,10 +24,10 @@
 <icon src="icon.png" />
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 <script src="js/jquery.js"></script>
-<script src="_assets/js/index.js"></script>
+
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
@@ -35,9 +35,10 @@
     <div class="browsehappy">You are using an <strong>outdated</strong> browser. Please
         <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
+
 <div id="wrapper">
     <div class="dialpad compact">
-        <div class="number"></div>
+        <div class="number" id="numpad_value"></div>
         <div class="dials">
             <ol>
                 <li class="digits"><p><strong>1</strong></p></li>
@@ -54,7 +55,7 @@
                 <li class="digits"><p><strong>#</strong></p></li>
                 <li class="digits"><p><strong><i class="fa fa-refresh"></i></strong><sup>Clear</sup></p></li>
                 <li class="digits"><p><strong><i class="fa fa-times"></i></strong><sup>Delete</sup></p></li>
-                <li class="digits pad-action"><p><strong><i class="fa fa-phone"></i></strong> <sup>Call</sup></p></li>
+                <a href="tel:"><li id="numpad_call" class="digits pad-action"><p><strong><i class="fa fa-phone"></i></strong> <sup>Call</sup></p></li></a>
             </ol>
         </div>
     </div>
@@ -72,9 +73,17 @@
 <!--[if lte IE 8]>
     <script src="vendor/js/respond.min.js" type="text/javascript"></script>
 <![endif]-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="vendor/js/jquery.2.1.0.min.js"><\/script>')</script>
 <script src="vendor/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+    <script type="text/javascript">
+function update(){
+   var number = $("#numpad_value").text();
+   $('#numpad_call')
+    .html(number)
+    .parent().attr('href', 'tel:'+number);
+}
+    </script>
 </body>
 </html>
