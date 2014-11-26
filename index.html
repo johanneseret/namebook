@@ -14,102 +14,268 @@
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page" class="jqm-demos jqm-home">
+
+
+<!-- Contacts
+================================================== -->
+<div data-role="page" class="jqm-home jqm-demos" id="contacts">
 
 	<div data-role="header" class="jqm-header">
-		<h2 style="padding:16px;">Namebook</h2>
+		<h2 style="padding:16px;">Contacts</h2>
 		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content jqm-content">
 		<form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Search ticker or firm name..."></form>
-<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
-	<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li><li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
-	<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
-	<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
-	<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li><li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
-	<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
-	<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li></ul>
+		<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+			<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li><li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
+			<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
+			<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
+			<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li><li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
+			<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
+			<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
+		</ul>
+	</div><!-- /content -->
 
-</div><!-- /content -->
-	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
-	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-	    		<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Change status</a></li>
-<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Add new contact</a></li>
-		     </ul>
-		</div><!-- /panel -->
-
+	<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
+	    <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+	    	<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Change status</a></li>
+			<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Add new contact</a></li>
+		 </ul>
+	</div><!-- /panel -->
 
 	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
     <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="b">
 		<div class="jqm-search">
 			<ul class="jqm-list" data-filter-placeholder="Search contacts..." data-filter-reveal="true">
-<li data-filtertext="@janivdavid" data-icon="phone"><a href="#">Janiv</a></li>
-<li data-filtertext="@johanneseret" data-icon="phone"><a href="#">Johannes</a></li>
-<li data-filtertext="@aapo" data-icon="phone"><a href="#">Alvar Aapo</a></li>
-<li data-filtertext="@molokovana" data-icon="phone"><a href="#">Irina Molokovana</a></li>
-<li data-filtertext="@sauli" data-icon="phone"><a href="#">Sauli Lehtinen</a></li>
-<li data-filtertext="@berska91" data-icon="phone"><a href="#">Berska</a></li>
-<li data-filtertext="@christianlee" data-icon="phone"><a href="#">Christian Lee</a></li>
-<li data-filtertext="@xenith" data-icon="phone"><a href="#">Xenith Weeler</a></li>
-		</ul>
-	</div>
-</li>
-
-
-
+				<li data-filtertext="@janivdavid" data-icon="phone"><a href="#">Janiv</a></li>
+				<li data-filtertext="@johanneseret" data-icon="phone"><a href="#">Johannes</a></li>
+				<li data-filtertext="@aapo" data-icon="phone"><a href="#">Alvar Aapo</a></li>
+				<li data-filtertext="@molokovana" data-icon="phone"><a href="#">Irina Molokovana</a></li>
+				<li data-filtertext="@sauli" data-icon="phone"><a href="#">Sauli Lehtinen</a></li>
+				<li data-filtertext="@berska91" data-icon="phone"><a href="#">Berska</a></li>
+				<li data-filtertext="@christianlee" data-icon="phone"><a href="#">Christian Lee</a></li>
+				<li data-filtertext="@xenith" data-icon="phone"><a href="#">Xenith Weeler</a></li>
 			</ul>
-
 		</div>
-		<!--footer!-->
-
-<<<<<<< HEAD
-<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false">
-	<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
-		<ul>
-			<li><a href="#" class="ui-btn-active" id="contact" data-icon="custom">Contacts</a></li>
-			<li><a href="#" id="email" data-icon="custom">Recent</a></li>
-			<li><a href="#" id="skull" data-icon="custom">Missed</a></li>
-			<li><a href="#" id="beer" data-icon="custom">Numpad</a></li>
-			<li><a href="views/profile.html" id="coffee" data-icon="custom">Profile</a></li>
-		</ul>
 	</div>
-</div><!-- /footer -->
-=======
-<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false"><div data-role="navbar" class="nav-glyphish-example" data-grid="d"><ul>
-	<li><a href="#" class="ui-btn-active" id="contact" data-icon="custom">Contacts</a></li>
-	<li><a href="#" id="email" data-icon="custom">Recent</a></li>
-	<li><a href="#" id="skull" data-icon="custom">Missed</a></li>
-	<li><a href="views/numpad/numpad.html" id="beer" data-icon="custom">Numpad</a></li>
-	<li><a href="views/profile.html" id="coffee" data-icon="custom">Profile</a></li></ul></div>
-		</div><!-- /footer -->
->>>>>>> FETCH_HEAD
-		
+
+
+	<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+			<ul>
+				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#recent">Recent</a></li>
+				<li><a href="#missed">Missed</a></li>
+				<li><a href="views/numpad/numpad.html">Numpad</a></li>
+				<li><a href="#profile">Profile</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END Contacts
+================================================== -->
+
+
+
+
+
+
+
+
+<!-- Recent
+================================================== -->
+<div data-role="page" class="jqm-home jqm-demos" id="recent">
+
+	<div data-role="header" class="jqm-header">
+		<h2 style="padding:16px;">Recent</h2>
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content jqm-content">
+		<form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Search ticker or firm name..."></form>
+		<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+			<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li><li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
+			<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
+			<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
+			<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li><li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
+			<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
+			<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
+		</ul>
+	</div><!-- /content -->
+
+	<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
+	    <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+	    	<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Change status</a></li>
+			<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Add new contact</a></li>
+		 </ul>
 	</div><!-- /panel -->
 
+	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="b">
+		<div class="jqm-search">
+			<ul class="jqm-list" data-filter-placeholder="Search contacts..." data-filter-reveal="true">
+				<li data-filtertext="@janivdavid" data-icon="phone"><a href="#">Janiv</a></li>
+				<li data-filtertext="@johanneseret" data-icon="phone"><a href="#">Johannes</a></li>
+				<li data-filtertext="@aapo" data-icon="phone"><a href="#">Alvar Aapo</a></li>
+				<li data-filtertext="@molokovana" data-icon="phone"><a href="#">Irina Molokovana</a></li>
+				<li data-filtertext="@sauli" data-icon="phone"><a href="#">Sauli Lehtinen</a></li>
+				<li data-filtertext="@berska91" data-icon="phone"><a href="#">Berska</a></li>
+				<li data-filtertext="@christianlee" data-icon="phone"><a href="#">Christian Lee</a></li>
+				<li data-filtertext="@xenith" data-icon="phone"><a href="#">Xenith Weeler</a></li>
+			</ul>
+		</div>
+	</div>
 
-</div><!-- /page -->
+
+	<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+			<ul>
+				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#recent">Recent</a></li>
+				<li><a href="#missed">Missed</a></li>
+				<li><a href="views/numpad/numpad.html">Numpad</a></li>
+				<li><a href="#profile">Profile</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END recent
+================================================== -->
+
+
+
+
+<!-- missed
+================================================== -->
+<div data-role="page" class="jqm-home jqm-demos" id="missed">
+
+	<div data-role="header" class="jqm-header">
+		<h2 style="padding:16px;">Missed</h2>
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content jqm-content">
+		<form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Search ticker or firm name..."></form>
+		<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+			<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li><li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
+			<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
+			<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
+			<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li><li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
+			<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
+			<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
+		</ul>
+	</div><!-- /content -->
+
+	<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
+	    <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+	    	<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Change status</a></li>
+			<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Add new contact</a></li>
+		 </ul>
+	</div><!-- /panel -->
+
+	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="b">
+		<div class="jqm-search">
+			<ul class="jqm-list" data-filter-placeholder="Search contacts..." data-filter-reveal="true">
+				<li data-filtertext="@janivdavid" data-icon="phone"><a href="#">Janiv</a></li>
+				<li data-filtertext="@johanneseret" data-icon="phone"><a href="#">Johannes</a></li>
+				<li data-filtertext="@aapo" data-icon="phone"><a href="#">Alvar Aapo</a></li>
+				<li data-filtertext="@molokovana" data-icon="phone"><a href="#">Irina Molokovana</a></li>
+				<li data-filtertext="@sauli" data-icon="phone"><a href="#">Sauli Lehtinen</a></li>
+				<li data-filtertext="@berska91" data-icon="phone"><a href="#">Berska</a></li>
+				<li data-filtertext="@christianlee" data-icon="phone"><a href="#">Christian Lee</a></li>
+				<li data-filtertext="@xenith" data-icon="phone"><a href="#">Xenith Weeler</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+			<ul>
+				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#recent">Recent</a></li>
+				<li><a href="#missed">Missed</a></li>
+				<li><a href="views/numpad/numpad.html">Numpad</a></li>
+				<li><a href="#profile">Profile</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END missed
+================================================== -->
+
+
+
+
+
+<!-- Profile
+================================================== -->
+<div data-role="page" class="jqm-home jqm-demos" id="profile">
+
+	<div data-role="header" class="jqm-header">
+		<h2 style="padding:16px;">Profile</h2>
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content jqm-content">
+		<form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Search ticker or firm name..."></form>
+		<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+			<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li><li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
+			<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
+			<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
+			<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li><li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
+			<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
+			<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
+		</ul>
+	</div><!-- /content -->
+
+	<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
+	    <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+	    	<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Change status</a></li>
+			<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Add new contact</a></li>
+		 </ul>
+	</div><!-- /panel -->
+
+	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="b">
+		<div class="jqm-search">
+			<ul class="jqm-list" data-filter-placeholder="Search contacts..." data-filter-reveal="true">
+				<li data-filtertext="@janivdavid" data-icon="phone"><a href="#">Janiv</a></li>
+				<li data-filtertext="@johanneseret" data-icon="phone"><a href="#">Johannes</a></li>
+				<li data-filtertext="@aapo" data-icon="phone"><a href="#">Alvar Aapo</a></li>
+				<li data-filtertext="@molokovana" data-icon="phone"><a href="#">Irina Molokovana</a></li>
+				<li data-filtertext="@sauli" data-icon="phone"><a href="#">Sauli Lehtinen</a></li>
+				<li data-filtertext="@berska91" data-icon="phone"><a href="#">Berska</a></li>
+				<li data-filtertext="@christianlee" data-icon="phone"><a href="#">Christian Lee</a></li>
+				<li data-filtertext="@xenith" data-icon="phone"><a href="#">Xenith Weeler</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div data-role="footer" class="nav-glyphish-example" data-theme="b" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+			<ul>
+				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#recent">Recent</a></li>
+				<li><a href="#missed">Missed</a></li>
+				<li><a href="views/numpad/numpad.html">Numpad</a></li>
+				<li><a href="#profile">Profile</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END profile
+================================================== -->
+
+
 
 </body>
-<script>
-$(document).on( "click", ".show-page-loading-msg", function() {
-  var $this = $( this ),
-  theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
-  msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
-  textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
-  textonly = !!$this.jqmData( "textonly" );
-  html = $this.jqmData( "html" ) || "";
-$.mobile.loading( 'show', {
-  text: msgText,
-  textVisible: textVisible,
-  theme: theme,
-  textonly: textonly,
-  html: html
-  });
-})
-.on( "click", ".hide-page-loading-msg", function() {
-  $.mobile.loading( "hide" );
-});
-</script>
+
 </html>
