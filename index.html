@@ -224,15 +224,37 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content jqm-content">
-		<form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Search ticker or firm name..."></form>
-		<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
-			<li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li><li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
-			<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
-			<li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
-			<li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li><li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
-			<li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
-			<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
-		</ul>
+
+<script type="text/javascript">
+// display the address information for all contacts
+
+function onSuccess(contacts) {
+    for (var i = 0; i < contacts.length; i++) {
+        for (var j = 0; j < contacts[i].addresses.length; j++) {
+            alert("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
+                "Type: "           + contacts[i].addresses[j].type          + "\n" +
+                "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
+                "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
+                "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
+                "Region: "         + contacts[i].addresses[j].region        + "\n" +
+                "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
+                "Country: "        + contacts[i].addresses[j].country);
+        }
+    }
+};
+
+function onError(contactError) {
+    alert('onError!');
+};
+
+// find all contacts
+var options = new ContactFindOptions();
+options.filter = "";
+var filter = ["displayName", "addresses"];
+navigator.contacts.find(filter, onSuccess, onError, options);
+</script>
+
+
 	</div><!-- /content -->
 
 	<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="b">
